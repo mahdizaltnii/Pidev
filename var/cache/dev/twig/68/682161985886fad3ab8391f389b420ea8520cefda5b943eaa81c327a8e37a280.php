@@ -71,6 +71,6 @@ class __TwigTemplate_fe507679362cdee13fd72e766e1949e7781cc536daba4cb8837300ce3fb
     value=\"<?php echo \$view->escape(\$value) ?>\"
     <?php if (\$checked): ?> checked=\"checked\"<?php endif ?>
 />
-", "@Framework/Form/radio_widget.html.php", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\radio_widget.html.php");
+", "@Framework/Form/radio_widget.html.php", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\radio_widget.html.php");
     }
 }

@@ -380,6 +380,6 @@ class __TwigTemplate_b74f419072e3dd0c189225dca2e74b776706190f0fb93bd94a97c907c70
       </div>
     </section>
 {% endblock %} 
-", "Back-office/listUsers.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\listUsers.html.twig");
+", "Back-office/listUsers.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\listUsers.html.twig");
     }
 }

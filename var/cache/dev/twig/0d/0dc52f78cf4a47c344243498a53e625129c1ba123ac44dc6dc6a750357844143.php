@@ -471,6 +471,6 @@ s0.parentNode.insertBefore(s1,s0);
 
 
 
- ", "event/showfront.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\event\\showfront.html.twig");
+ ", "event/showfront.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\event\\showfront.html.twig");
     }
 }

@@ -1,8 +1,7 @@
 <?php
-
 namespace App\Controller;
-
 use App\Entity\Event;
+use App\Entity\Categorie;
 use App\Form\EventType;
 use App\Repository\EventRepository;
 use Doctrine\ORM\EntityManagerInterface;
@@ -13,7 +12,6 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Dompdf\Dompdf;
 use Dompdf\Options;
-
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Serializer\Serializer;
@@ -21,6 +19,8 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 use Swift_Mailer;
 use Knp\Component\Pager\PaginatorInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+
 
 /**
  * @Route("/event")
@@ -170,7 +170,7 @@ $pdfOptions = new Options();
    $event = $paginator->paginate(
        $donnees,
        $request->query->getInt('page' ,1),
-       1
+       4
    );
 
 
@@ -270,7 +270,7 @@ $pdfOptions = new Options();
     public function mail( \Swift_Mailer $mailer)
 {
     $message = (new \Swift_Message('Vous Avez Ajouter un évenement!!'))
-        ->setFrom('leith.ghandri@gmail.com')
+        ->setFrom('narjes.gawa@esprit.tn')
         ->setTo('zouhour.gawa@esprit.tn')
         ->setBody(
             $this->renderView(
@@ -295,4 +295,172 @@ $pdfOptions = new Options();
 
     $mailer->send($message);
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+/**
+     * @Route("/event/add3", name="add_event")
+     * @Method("GET")
+     */
+
+
+
+    public function AddEvent(Request $request, NormalizerInterface $Normalizer )
+    {
+    //Nous utilisons la Repository pour récupérer les objets que nous avons dans la base de données
+   
+    //Nous utilisons la fonction normalize qui transforme en format JSON nos donnée qui sont
+    //en tableau d'objet Students
+    $em=$this->getDoctrine()->getManager();
+    $event=new Event();
+    $categorie1 = new Categorie();
+    $categorie = new Categorie();
+   
+    $categorie1 = $request->get('Categorie');
+    $repository = $this->getdoctrine()->getRepository(Categorie::class);
+    $categorie = $repository->findOneBy(array('id' => $categorie1));
+
+    if (!$categorie) {
+        throw $this->createNotFoundException(
+            'No product found for id '
+        );
+    }else
+    { 
+            $event->setCategorie($categorie);
+            $event->setName($request->get('Name'));
+            $event->setDescription($request->get('description'));
+            $event->setDate(date_create_from_format("Y-m-d",$request->get("date")));
+            $event->setLieu($request->get('lieu'));
+            $event->setPicture($request->get('picture'));
+           
+            
+            
+   
+    $em->persist($event);
+    $em->flush();
+    $jsonContent=$Normalizer->normalize($event,'json',['groups'=>'post:read']);
+    
+    return new Response(json_encode($jsonContent));
+          
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+/**
+     * @Route("/event/updateevent/{id}", name="update_event")
+     * @Method("PUT")
+     */
+    public function modifierEventAction(Request $request, NormalizerInterface $Normalizer) {
+        $em = $this->getDoctrine()->getManager();
+        $Event = $this->getDoctrine()->getManager()
+            ->getRepository(Event::class)
+            ->find($request->get("id"));
+            $Name = $request->query->get("Name");
+            $description = $request->query->get("description");
+            $lieu = $request->query->get("lieu");
+            $date = $request->query->get("date");
+            $picture = $request->query->get("picture");
+
+           
+            $Event->setName($request->get('Name'));
+            $Event->setDescription($request->get('description'));
+            $Event->setDate(date_create_from_format("Y-m-d",$request->get("date")));
+            $Event->setLieu($request->get('lieu'));
+            $Event->setPicture($request->get('picture'));
+
+        $em->persist($Event);
+        $em->flush();
+        $jsonContent=$Normalizer->normalize($Event,'json',['groups'=>'post:read']);
+    
+    return new Response(json_encode($jsonContent));
+          
+    }
+
+
+
+ /**
+     * @Route("/event/deleteevent", name="delete_event")
+     * @Method("DELETE")
+     */
+
+    public function deleteEventAction(Request $request) {
+        $id = $request->get("id");
+
+        $em = $this->getDoctrine()->getManager();
+        $Event = $em->getRepository(event::class)->find($id);
+        if($Event!=null ) {
+            $em->remove($Event);
+            $em->flush();
+
+            $serialize = new Serializer([new ObjectNormalizer()]);
+            $formatted = $serialize->normalize("Votre Event a ete supprimee avec success.");
+            return new JsonResponse($formatted);
+
+        }
+        return new JsonResponse("id Event invalide.");
+
+
+    }
+    /**
+     * @Route("/event/liste2",name="liste_event")
+     */
+    
+    
+    public function getEvent(NormalizerInterface $Normalizer )
+    {
+    //Nous utilisons la Repository pour récupérer les objets que nous avons dans la base de données
+    $repository =$this->getDoctrine()->getRepository(Event::class);
+    $Event=$repository->FindAll();
+    //Nous utilisons la fonction normalize qui transforme en format JSON nos donnée qui sont
+    //en tableau d'objet Students
+    $jsonContent=$Normalizer->normalize($Event,'json',['groups'=>'post:read']);
+    
+    
+    
+    return new Response(json_encode($jsonContent));
+    dump($jsonContent);
+    die;}
 }

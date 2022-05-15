@@ -81,6 +81,6 @@ class __TwigTemplate_301780444f5a2a9bbafdfa1a2091d7430c7321dd0f088797c8c4c3fdd0b
  */
 #}
 {% extends '@KnpPaginator/Pagination/twitter_bootstrap_v4_pagination.html.twig' %}
-", "@KnpPaginator/Pagination/bootstrap_v5_pagination.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\bootstrap_v5_pagination.html.twig");
+", "@KnpPaginator/Pagination/bootstrap_v5_pagination.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\bootstrap_v5_pagination.html.twig");
     }
 }

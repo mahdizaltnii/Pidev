@@ -1637,6 +1637,6 @@ class __TwigTemplate_f8efc330495293fb299b3655076f0fedefa05539098df51df7f305dcf7f
       </div>
     </section>
 
-{% endblock %}", "Front-office/Annoces.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-office\\Annoces.html.twig");
+{% endblock %}", "Front-office/Annoces.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-office\\Annoces.html.twig");
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+
 use App\Entity\Reclamation;
 use App\Entity\Reponse;
 use App\Form\ReclamationType;
@@ -20,12 +21,8 @@ use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-
-
-
-
-
-
+use Twilio\Rest\Client;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 
 
 
@@ -340,6 +337,106 @@ class ReclamationController extends AbstractController
 
 
      }
+
+/**
+     * @Route("/reclamation/add3", name="add_reclamation")
+     * @Method("GET")
+     */
+
+    public function addreclamation(Request $request)
+    {
+        $Reclamation = new Reclamation();
+        $sujet = $request->query->get("sujet");
+        $description = $request->query->get("description");
+        $date = $request->query->get("date");
+        $em = $this->getDoctrine()->getManager();
+        $Reclamation->setSujet($sujet);
+        $Reclamation->setDescription($description);
+        $time = date('Y-m-d H:i:s', (time()));
+        $Reclamation->setDate(\DateTime::createFromFormat('Y-m-d H:i:s', $time));
+        $em->persist($Reclamation);
+        $em->flush();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($Reclamation);
+        return new JsonResponse($formatted);
+
+    }
+
+
+
+/**
+     * @Route("/reclamation/updatereclamation/{id}", name="update_reclamation")
+     * @Method("PUT")
+     */
+    public function modifierReclamationAction(Request $request) {
+        $em = $this->getDoctrine()->getManager();
+        $Reclamation = $this->getDoctrine()->getManager()
+            ->getRepository(Reclamation::class)
+            ->find($request->get("id"));
+            $sujet = $request->query->get("sujet");
+            $description = $request->query->get("description");
+            $date = $request->query->get("date");
+
+            $Reclamation->setSujet($sujet);
+            $Reclamation->setDescription($description);
+            $time = date('Y-m-d H:i:s', (time()));
+            $Reclamation->setDate(\DateTime::createFromFormat('Y-m-d H:i:s', $time));
+
+        $em->persist($Reclamation);
+        $em->flush();
+        $serializer = new Serializer([new ObjectNormalizer()]);
+        $formatted = $serializer->normalize($Reclamation);
+        return new JsonResponse("reclamation a ete modifiee avec success.");
+
+    }
+
+
+
+ /**
+     * @Route("/reclamation/deletereclamation", name="delete_reclamation")
+     * @Method("DELETE")
+     */
+
+    public function deleteReclamationAction(Request $request) {
+        $id = $request->get("id");
+
+        $em = $this->getDoctrine()->getManager();
+        $Reclamation = $em->getRepository(reclamation::class)->find($id);
+        if($Reclamation!=null ) {
+            $em->remove($Reclamation);
+            $em->flush();
+
+            $serialize = new Serializer([new ObjectNormalizer()]);
+            $formatted = $serialize->normalize("Votre Reclamation a ete supprimee avec success.");
+            return new JsonResponse($formatted);
+
+        }
+        return new JsonResponse("id Reclamation invalide.");
+
+
+    }
+    /**
+     * @Route("/reclamation/liste2",name="liste_reclamation")
+     */
+    
+    
+    public function getReclamation(NormalizerInterface $Normalizer )
+    {
+    //Nous utilisons la Repository pour récupérer les objets que nous avons dans la base de données
+    $repository =$this->getDoctrine()->getRepository(Reclamation::class);
+    $Reclamation=$repository->FindAll();
+    //Nous utilisons la fonction normalize qui transforme en format JSON nos donnée qui sont
+    //en tableau d'objet Students
+    $jsonContent=$Normalizer->normalize($Reclamation,'json',['groups'=>'post:read']);
+    
+    
+    
+    return new Response(json_encode($jsonContent));
+    dump($jsonContent);
+    die;}
+
+
+
 
 
 

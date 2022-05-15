@@ -79,6 +79,6 @@ class __TwigTemplate_e5204f3881b9dcb28678758a4188248ff01eaeacfcadef7d716b0a8d0ee
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ categorie.id) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "categorie/_delete_form.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\categorie\\_delete_form.html.twig");
+", "categorie/_delete_form.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\categorie\\_delete_form.html.twig");
     }
 }

@@ -71,6 +71,6 @@ class __TwigTemplate_5ef10ae85edf63719023963a43b9783e61dfd95df5dc7948f39029cdde6
 <?php else: ?>
 <?php echo \$view['form']->block(\$form, 'form_widget_simple')?>
 <?php endif ?>
-", "@Framework/Form/form_widget.html.php", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_widget.html.php");
+", "@Framework/Form/form_widget.html.php", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\form_widget.html.php");
     }
 }

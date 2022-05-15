@@ -342,6 +342,6 @@ function searchEnt() {
     
  
 {% endblock %}
-", "event/index.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\event\\index.html.twig");
+", "event/index.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\event\\index.html.twig");
     }
 }

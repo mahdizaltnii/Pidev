@@ -303,6 +303,6 @@ class __TwigTemplate_2e362e195df0ce47454a4fe3b8a9ea16c4bb17e6a94feb4240e19078543
     </section>
 
     <a href=\"{{ path('reclamation_new') }}\"><button class=\"btn \">Create new</button></a>
-{% endblock %}", "reclamation/index.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\reclamation\\index.html.twig");
+{% endblock %}", "reclamation/index.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\reclamation\\index.html.twig");
     }
 }

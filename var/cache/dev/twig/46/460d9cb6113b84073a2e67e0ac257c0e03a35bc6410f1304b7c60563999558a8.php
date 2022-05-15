@@ -171,6 +171,6 @@ class __TwigTemplate_0e81b0a2d4f665b2887284470aefb955a7cee9fc7fd21924fc38bb0408b
 
 
 
-", "event/new.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\event\\new.html.twig");
+", "event/new.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\event\\new.html.twig");
     }
 }

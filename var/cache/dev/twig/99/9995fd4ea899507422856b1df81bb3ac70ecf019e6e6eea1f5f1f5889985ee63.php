@@ -129,6 +129,6 @@ class __TwigTemplate_1526c27fa9581274f45918713cb04660a4bb579fecf965558e0d05c6b12
         <button type=\"submit\" class=\"btn btn-primary\"><a href=\"{{ path('listAnnoncesF') }}\">Retourner aux listes d'annonces</a></button>
     </div>
     </section>
-{% endblock %}", "Front-Annonces/ajoutAnnonce.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-Annonces\\ajoutAnnonce.html.twig");
+{% endblock %}", "Front-Annonces/ajoutAnnonce.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-Annonces\\ajoutAnnonce.html.twig");
     }
 }

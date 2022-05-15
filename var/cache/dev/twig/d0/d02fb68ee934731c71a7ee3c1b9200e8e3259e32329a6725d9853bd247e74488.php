@@ -127,6 +127,6 @@ class __TwigTemplate_b831af1664bb61b64c2a370a92e0946d96e38aaeb590884a3479c252785
     <button type=\"submit\" class=\"btn btn-primary w-100\" style=\"margin-bottom: 10px;\">Filtrer</button>
     <button type=\"submit\" class=\"btn btn-primary w-100\"><a href=\"{{ path('ajoutAnnonce') }}\">Ajouter un Annonce</a></button>
 {{ form_end(annonceform) }}
-", "Front-Annonces/_filtrerannonce.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-Annonces\\_filtrerannonce.html.twig");
+", "Front-Annonces/_filtrerannonce.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-Annonces\\_filtrerannonce.html.twig");
     }
 }

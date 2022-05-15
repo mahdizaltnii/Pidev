@@ -1777,6 +1777,6 @@ event.preventDefault();
   </body>
   
 </html>
-", "base-front.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\base-front.html.twig");
+", "base-front.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\base-front.html.twig");
     }
 }

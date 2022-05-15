@@ -943,6 +943,6 @@ class __TwigTemplate_1cffe5137dcb7662f941898037b66060d2ca53617a6548497288a1113f2
       </div>
     </section>
 
-{% endblock %}", "Front-office/Marketplace.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-office\\Marketplace.html.twig");
+{% endblock %}", "Front-office/Marketplace.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-office\\Marketplace.html.twig");
     }
 }

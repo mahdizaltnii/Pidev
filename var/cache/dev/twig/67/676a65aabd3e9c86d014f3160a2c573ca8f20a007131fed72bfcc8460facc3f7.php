@@ -1145,6 +1145,6 @@ class __TwigTemplate_ef4ccb717c508e11b534e729851d2a4f52ddf373699a6002d46e71e8140
 
 {% endblock %} 
 
-", "Front-office/Forum.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-office\\Forum.html.twig");
+", "Front-office/Forum.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-office\\Forum.html.twig");
     }
 }

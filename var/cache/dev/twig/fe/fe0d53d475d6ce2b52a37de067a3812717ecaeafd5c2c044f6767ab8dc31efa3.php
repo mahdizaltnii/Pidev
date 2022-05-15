@@ -79,6 +79,6 @@ class __TwigTemplate_b030c0a680bc53b869da95cd56f81384020bc8ee78451784d7df1bf6df6
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('Supprimer' ~ comment.id) }}\">
     <button class=\"btn\">Supprimer</button>
 </form>
-", "Back-office/comments/_supprimer_form.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\comments\\_supprimer_form.html.twig");
+", "Back-office/comments/_supprimer_form.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\comments\\_supprimer_form.html.twig");
     }
 }

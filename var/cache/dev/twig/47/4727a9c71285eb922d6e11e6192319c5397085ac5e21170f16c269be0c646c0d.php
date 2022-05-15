@@ -126,6 +126,6 @@ class __TwigTemplate_3318ed8e36a176eae81b5e3b51219a72dfc8eb450ee0ab03ed2be9273cb
    
 </div>
  
-{{ form_end(form) }}", "categorie/_form.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\categorie\\_form.html.twig");
+{{ form_end(form) }}", "categorie/_form.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\categorie\\_form.html.twig");
     }
 }

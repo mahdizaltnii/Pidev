@@ -49,7 +49,7 @@ class Reclamation
 
     /**
      * @ORM\OneToOne(targetEntity=Reponse::class, mappedBy="reclamation", cascade={"persist", "remove"})
-     *  @Groups("post:read")
+
      */
     private $reponse;
 

@@ -79,6 +79,6 @@ class __TwigTemplate_5bbc1e518cae5810faaf2921ab3b62f038559d89e2a8462f450a2299d97
 /*
 {{ include('@Twig/Exception/exception.txt.twig', { exception: exception }) }}
 */
-", "@Twig/Exception/exception.js.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\exception.js.twig");
+", "@Twig/Exception/exception.js.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\twig-bundle\\Resources\\views\\Exception\\exception.js.twig");
     }
 }

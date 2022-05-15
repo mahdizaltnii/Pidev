@@ -114,6 +114,6 @@ class __TwigTemplate_c68c6cbed1063028b1bb20ea945c3affeae182277e6b4ad74e11ddea25c
     {{ form_widget(form) }}
 
     {{ form_end(form) }}
-{% endblock %}", "Back-Categorie/editBAnnonceCat.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-Categorie\\editBAnnonceCat.html.twig");
+{% endblock %}", "Back-Categorie/editBAnnonceCat.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-Categorie\\editBAnnonceCat.html.twig");
     }
 }

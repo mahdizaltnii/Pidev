@@ -155,6 +155,6 @@ class __TwigTemplate_30e1299fe973eb5cc662142572e76b14cfe719db2a987679b6401514cbf
             <td><a href=\"{{ path('editB_annonceCat',{'id':a.id}) }}\">Update</a></td>
         </tr {% endfor %}>
     </table>
-{% endblock %}", "Back-Categorie/afficheAnnonceCat.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-Categorie\\afficheAnnonceCat.html.twig");
+{% endblock %}", "Back-Categorie/afficheAnnonceCat.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-Categorie\\afficheAnnonceCat.html.twig");
     }
 }

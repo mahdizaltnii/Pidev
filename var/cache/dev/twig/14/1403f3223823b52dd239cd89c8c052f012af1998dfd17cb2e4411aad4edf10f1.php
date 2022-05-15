@@ -1021,6 +1021,6 @@ class __TwigTemplate_f5b4635b762834a7037172883a338391d12379f4a6508a160b54c09e31a
 
 </body>
 </html>
-", "base-back.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\base-back.html.twig");
+", "base-back.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\base-back.html.twig");
     }
 }

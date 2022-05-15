@@ -137,6 +137,6 @@ class __TwigTemplate_ea2a8844b318883129a0c7f4fa378735c52a6d022e2f91e336f37a5d923
             </div>
         </div>
 {% endblock %}
-", "Back-office/comments/modifier.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\comments\\modifier.html.twig");
+", "Back-office/comments/modifier.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\comments\\modifier.html.twig");
     }
 }

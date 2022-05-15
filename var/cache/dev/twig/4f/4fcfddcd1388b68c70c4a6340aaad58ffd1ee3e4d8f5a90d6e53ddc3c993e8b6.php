@@ -92,6 +92,6 @@ class __TwigTemplate_3661b54bdc1acbc2a022f3f9450e0b54a650534c32661f076d22113c214
     {{ form_widget(form) }}
     <button class=\"btn\">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
-", "Back-office/bad_words/_form.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\bad_words\\_form.html.twig");
+", "Back-office/bad_words/_form.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\bad_words\\_form.html.twig");
     }
 }

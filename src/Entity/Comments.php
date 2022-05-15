@@ -36,13 +36,13 @@ class Comments
 
     /**
      * @ORM\ManyToOne(targetEntity=Posts::class, inversedBy="comments")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $poste;
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="usercomments")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $user;
 

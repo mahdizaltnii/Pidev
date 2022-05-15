@@ -79,6 +79,6 @@ pour l'activer</p>
 pour l'activer</p>
 <p><a href=\"{{absolute_url(path('activation', {'token':token})) }}\"> Activer mon compt 
 </a></p>
-", "Front-office/email.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-office\\email.html.twig");
+", "Front-office/email.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-office\\email.html.twig");
     }
 }

@@ -79,6 +79,6 @@ class __TwigTemplate_5cb755e6835a825fb0811e09afbbb50f8abdb53d5bfc69a2a755ff837f9
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ post.id) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "blog/_delete_form.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\blog\\_delete_form.html.twig");
+", "blog/_delete_form.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\blog\\_delete_form.html.twig");
     }
 }

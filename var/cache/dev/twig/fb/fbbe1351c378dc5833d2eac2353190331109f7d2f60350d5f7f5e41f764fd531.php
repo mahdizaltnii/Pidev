@@ -131,6 +131,6 @@ class __TwigTemplate_4cf60276b38624cb47a004c60bdb1c0804ab5b45f0ecbf0e7345a1ce25d
     </span>
     {{ title }}
 </a>
-", "@KnpPaginator/Pagination/twitter_bootstrap_v3_sortable_link.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\twitter_bootstrap_v3_sortable_link.html.twig");
+", "@KnpPaginator/Pagination/twitter_bootstrap_v3_sortable_link.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\twitter_bootstrap_v3_sortable_link.html.twig");
     }
 }

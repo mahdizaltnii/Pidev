@@ -59,6 +59,6 @@ class __TwigTemplate_0bbc5d247d5818d780fd15d79be546098b51f324d3b144e8e98bbe34fc5
 
     public function getSourceContext()
     {
-        return new Source("", "emails/registration.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\emails\\registration.html.twig");
+        return new Source("", "emails/registration.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\emails\\registration.html.twig");
     }
 }

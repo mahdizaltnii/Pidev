@@ -131,6 +131,6 @@ class __TwigTemplate_7a6b74e8636b95c640499aa3e636c9c27369fc8d504e3103fdf4dcc3fe8
     </section>
 
     
-{% endblock %}", "blog/ajoutposte.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\blog\\ajoutposte.html.twig");
+{% endblock %}", "blog/ajoutposte.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\blog\\ajoutposte.html.twig");
     }
 }

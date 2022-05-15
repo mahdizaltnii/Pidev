@@ -25,7 +25,7 @@ class TestController extends AbstractController
 
 
        /**
-     * @Route("/Home", name="Home")
+     * @Route("/", name="Home")
      */
     public function Home(): Response
     {

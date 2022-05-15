@@ -208,6 +208,6 @@ function myFunction() {
 </script>
 </div>
 </section><!-- End Contact Section -->
-{%endblock %}", "stat/index.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\stat\\index.html.twig");
+{%endblock %}", "stat/index.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\stat\\index.html.twig");
     }
 }

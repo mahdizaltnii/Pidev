@@ -303,6 +303,6 @@ class __TwigTemplate_d59d30a5d0293f28580441ae05e6c38f277e7de2efbad1424e789f0770c
         </div> 
         </div> 
 </section>         
-{% endblock %}", "Back-office/posts/index.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\posts\\index.html.twig");
+{% endblock %}", "Back-office/posts/index.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\posts\\index.html.twig");
     }
 }

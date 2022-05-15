@@ -973,6 +973,6 @@ class Theme {
         return hash >>> 0;
     }
 }
-", "@WebProfiler/Collector/time.js", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\time.js");
+", "@WebProfiler/Collector/time.js", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\web-profiler-bundle\\Resources\\views\\Collector\\time.js");
     }
 }

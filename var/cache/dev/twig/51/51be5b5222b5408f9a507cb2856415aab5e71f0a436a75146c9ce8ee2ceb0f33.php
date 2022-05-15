@@ -230,6 +230,6 @@ class __TwigTemplate_adfaca3fd3ce4113e31b3e7dc2341391cbd88726579a128dff767370cd9
               <!-- /.card-body -->
             </div>
     </section>
-{% endblock %}", "Back-office/add_team.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\add_team.html.twig");
+{% endblock %}", "Back-office/add_team.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\add_team.html.twig");
     }
 }

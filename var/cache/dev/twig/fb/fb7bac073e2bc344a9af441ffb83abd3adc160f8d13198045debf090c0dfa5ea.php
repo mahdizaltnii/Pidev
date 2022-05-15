@@ -96,6 +96,6 @@ class __TwigTemplate_0c5d5d6811334679690c9066f278e57a8f36c25c9283a45bafd3a752771
     width: fit-content;
     right: auto;
     left: 100px; #}
-       ", "blog/_form.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\blog\\_form.html.twig");
+       ", "blog/_form.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\blog\\_form.html.twig");
     }
 }

@@ -214,6 +214,6 @@ class __TwigTemplate_c16125e44fa036410d7891bb91a877997235f7b85954ae81e65db209749
     </div>
 
 {% endblock %}
-", "Front-Annonces/show_annonce.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-Annonces\\show_annonce.html.twig");
+", "Front-Annonces/show_annonce.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-Annonces\\show_annonce.html.twig");
     }
 }

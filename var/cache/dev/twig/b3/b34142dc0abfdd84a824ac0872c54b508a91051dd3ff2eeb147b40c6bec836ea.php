@@ -799,6 +799,6 @@ class __TwigTemplate_4cae6fbdd8a73950f31088efac322d7c58718c68629585a54d5ca994129
       </div>
     </section>
 
-{% endblock %}", "Front-office/Events.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-office\\Events.html.twig");
+{% endblock %}", "Front-office/Events.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-office\\Events.html.twig");
     }
 }

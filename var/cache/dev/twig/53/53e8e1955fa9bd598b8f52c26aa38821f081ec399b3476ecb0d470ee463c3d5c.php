@@ -253,6 +253,6 @@ class __TwigTemplate_b0a28e5c0c5aa9a08626fbb17b6f8743361c99a78eebe867a93dafdbe62
         </div> 
         </div> 
 </section>         
-{% endblock %}", "Back-office/list_team.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\list_team.html.twig");
+{% endblock %}", "Back-office/list_team.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\list_team.html.twig");
     }
 }

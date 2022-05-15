@@ -146,6 +146,6 @@ class __TwigTemplate_45b3159a9902c0032d4568b04d99b6d572115fed900e9865160f4157304
             {{ form_end(form) }}
         </div>
     </section>
-{% endblock %}", "Front-Annonces/editAnnonce.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-Annonces\\editAnnonce.html.twig");
+{% endblock %}", "Front-Annonces/editAnnonce.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-Annonces\\editAnnonce.html.twig");
     }
 }

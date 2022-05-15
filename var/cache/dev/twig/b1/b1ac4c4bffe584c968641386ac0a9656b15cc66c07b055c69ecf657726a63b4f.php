@@ -183,6 +183,6 @@ class __TwigTemplate_9e1ceb3e033bb50fe0052b4afa57bb24e9ff2e2acb98a6eaa4cbe8d0ddc
 
     <a href=\"{{ path('app_bad_words_new') }}\">Create new</a>
 {% endblock %}
-", "Back-office/bad_words/index.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\bad_words\\index.html.twig");
+", "Back-office/bad_words/index.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\bad_words\\index.html.twig");
     }
 }

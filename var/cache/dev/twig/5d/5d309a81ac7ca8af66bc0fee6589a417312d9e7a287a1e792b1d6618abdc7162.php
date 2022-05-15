@@ -3395,6 +3395,6 @@ body.outlook p {
         min-width: 0;
     }
 }
-", "@email/zurb_2/main.css", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\twig-bridge\\Resources\\views\\Email\\zurb_2\\main.css");
+", "@email/zurb_2/main.css", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\twig-bridge\\Resources\\views\\Email\\zurb_2\\main.css");
     }
 }

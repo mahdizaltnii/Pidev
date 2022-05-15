@@ -206,6 +206,6 @@ class __TwigTemplate_efec10ebff37cb2d60ad9c282fc4239ff4df467df480eb088ec322fc2ff
         </tr {% endfor %}>
     </table>
     {{ knp_pagination_render(annonce) }}
-{% endblock %}", "Back-Annonces/afficheAnnonces.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-Annonces\\afficheAnnonces.html.twig");
+{% endblock %}", "Back-Annonces/afficheAnnonces.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-Annonces\\afficheAnnonces.html.twig");
     }
 }

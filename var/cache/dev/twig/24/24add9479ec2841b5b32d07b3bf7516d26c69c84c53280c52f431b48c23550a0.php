@@ -238,6 +238,6 @@ class __TwigTemplate_aa181da05438a44a82fe2acdaa1620aa46190fb4cf648ba22ae1c614798
           </div>
           {% endfor %}
     </section>
-{% endblock %}", "Front-office/team.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-office\\team.html.twig");
+{% endblock %}", "Front-office/team.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-office\\team.html.twig");
     }
 }

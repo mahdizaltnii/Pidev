@@ -133,6 +133,6 @@ class __TwigTemplate_0c83e5110ed06149b1b7552f05e2dfac1b5eb5fb8097a5759f7f2462d04
     </div>
     </section>
 {% endblock %}
-", "blog/edit.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\blog\\edit.html.twig");
+", "blog/edit.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\blog\\edit.html.twig");
     }
 }

@@ -222,6 +222,6 @@ class __TwigTemplate_c2d10a26541efa77ff554c56420ee2f84bb68cfaf0047ead09344794b59
 
     {{ include('event/_delete_form.html.twig') }}
 {% endblock %}
-", "event/show.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\event\\show.html.twig");
+", "event/show.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\event\\show.html.twig");
     }
 }

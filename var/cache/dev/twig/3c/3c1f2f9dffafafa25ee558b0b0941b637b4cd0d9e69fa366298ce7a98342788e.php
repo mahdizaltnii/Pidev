@@ -167,6 +167,6 @@ class __TwigTemplate_75efd1cf7eec69b99e4b7196027a44e157387251fe2efd03d13e0fd0909
 
 
 </center>
-{% endblock %}", "categorie/new.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\categorie\\new.html.twig");
+{% endblock %}", "categorie/new.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\categorie\\new.html.twig");
     }
 }

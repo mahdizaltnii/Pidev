@@ -118,6 +118,6 @@ class __TwigTemplate_15694e13caf70ed8198ee9221dfc9a54a1ae45192a390db9aca9fc12c15
 
     {{ include('Back-office/bad_words/_delete_form.html.twig') }}
 {% endblock %}
-", "Back-office/bad_words/edit.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\bad_words\\edit.html.twig");
+", "Back-office/bad_words/edit.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\bad_words\\edit.html.twig");
     }
 }

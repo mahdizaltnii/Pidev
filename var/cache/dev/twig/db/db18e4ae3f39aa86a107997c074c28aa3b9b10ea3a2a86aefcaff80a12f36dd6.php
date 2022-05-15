@@ -141,6 +141,6 @@ class __TwigTemplate_7c0fcdb57742d9fcc587b59548324573b417dc9c57eb969c5d20681ce3e
     </div>
 </section>
 {% endblock %}
-", "blog/editComment.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\blog\\editComment.html.twig");
+", "blog/editComment.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\blog\\editComment.html.twig");
     }
 }

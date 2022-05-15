@@ -131,6 +131,6 @@ class __TwigTemplate_a316a820fa2a7c353fd9b79fcae38e4aee3a5e05a032ae3b325467e29e4
     </span>
 {{ title }}
 </a>
-", "@KnpPaginator/Pagination/uikit_v3_sortable.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\uikit_v3_sortable.html.twig");
+", "@KnpPaginator/Pagination/uikit_v3_sortable.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\uikit_v3_sortable.html.twig");
     }
 }

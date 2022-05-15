@@ -18,6 +18,9 @@ use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use App\Repository\UserRepository;
 use Gedmo\Sluggable\Util\Urlizer;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 
 class UserController extends AbstractController
@@ -51,8 +54,8 @@ class UserController extends AbstractController
             $user->setIsactive(true);
             $user->setRoles(["ROLE_USER"]);
             //le cryptage de mot de passe
-            $hash = $encoder->encodePassword($user, $user->getPassword());
-            $user->setPassword($hash);
+            //$hash = $encoder->encodePassword($user, $user->getPassword());
+            $user->setPassword($user->getPassword());
             //générer le token d'activation 
             $user->setActivationToken(md5(uniqid()));
             $manager->persist($user);
@@ -147,6 +150,96 @@ class UserController extends AbstractController
     {
         $teams = $this->getDoctrine()->getRepository(Team::class)->findAll();
         return $this->render('Front-office/team.html.twig', array('teams' => $teams));
+    }
+/**
+     * @Route("/user/signup", name="signup")
+     */
+    public function signupAction(Request $request, UserPasswordEncoderInterface $passwordEncoder)
+    {
+        $email = $request->query->get("email");
+        $username = $request->query->get("username");
+        $password = $request->query->get("password");
+
+
+        //controle sur l'email
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return new Response("email invalid");
+        }
+        $user = new User();
+        $user->setEmail($email);
+        $user->setUsername($username);
+        $user->setPassword(
+            $passwordEncoder->encodePassword(
+                $user,
+                $password
+            )
+        );
+        $user->setRoles(["ROLE_ADMIN"]);
+        $user->setIsactive(true);
+
+        try {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($user);
+            $em->flush();
+            return new JsonResponse("Account created", 200);
+        } catch (\Exception $ex) {
+            return new Response("exception" . $ex->getMessage());
+        }
+    }
+
+    /**
+     * @Route("/user/signin", name="signin")
+     */
+    public function signinAction(Request $request)
+    {
+        $email = $request->query->get("email");
+        $password = $request->query->get("password");
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository(User::class)->findOneBy(['email' => $email]);
+        if ($user) {
+            if (password_verify($password, $user->getPassword())) {
+                $serializer = new Serializer([new ObjectNormalizer()]);
+                $formatted = $serializer->normalize($user);
+                return new JsonResponse($formatted);
+            } else {
+                return new Response("password or email not found");
+            }
+        } else {
+            return new Response("password or email not found");
+        }
+    }
+
+    /**
+     * @Route("/user/editUser", name="editUser")
+     */
+    public function edituser(Request $request, UserPasswordEncoderInterface $passwordEncoder)
+    {
+        $id = $request->get("id");
+        $username = $request->query->get("username");
+        $password = $request->query->get("password");
+        $email = $request->query->get("email");
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository(User::class)->find($id);
+
+        $user->setUsername($username);
+        $user->setEmail($email);
+        $user->setPassword(
+            $passwordEncoder->encodePassword(
+                $user,
+                $password
+            )
+        );
+        $user->setRoles(["ROLE_USER"]);
+        $user->setIsactive(true);
+
+        try {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($user);
+            $em->flush();
+            return new JsonResponse("Account updated", 200);
+        } catch (\Exception $ex) {
+            return new Response("failed" . $ex->getMessage());
+        }
     }
 
 }

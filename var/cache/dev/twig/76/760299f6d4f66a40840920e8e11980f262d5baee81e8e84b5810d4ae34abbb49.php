@@ -1839,6 +1839,6 @@ class __TwigTemplate_e29832c93efcf15deb2ccb6d60deac08603ebe1de50b297847b98564f2e
         </div>
       </div>
     </section>
-{% endblock %}", "Front-office/Home.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-office\\Home.html.twig");
+{% endblock %}", "Front-office/Home.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-office\\Home.html.twig");
     }
 }

@@ -639,6 +639,6 @@ class __TwigTemplate_777fce6aed25a48b2a6dade95aa8c29c7c915078a97cb6674909059afd0
     });
 
 /*]]>*/</script>
-", "@Twig/base_js.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\twig-bundle\\Resources\\views\\base_js.html.twig");
+", "@Twig/base_js.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\twig-bundle\\Resources\\views\\base_js.html.twig");
     }
 }

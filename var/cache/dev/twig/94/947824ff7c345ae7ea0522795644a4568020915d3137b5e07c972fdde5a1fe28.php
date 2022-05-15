@@ -260,6 +260,6 @@ class __TwigTemplate_d86bfa7eb92e2973acbc102ef81d2f3e0b6a52501ad5853670ad95e3cfd
 <script src=\"{{ asset('back-office/dist/js/adminlte.min.js') }}\"></script>
 </body>
 </html> #}
-", "Back-office/RegBack.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\RegBack.html.twig");
+", "Back-office/RegBack.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\RegBack.html.twig");
     }
 }

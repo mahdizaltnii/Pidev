@@ -82,6 +82,6 @@ class __TwigTemplate_cdbae7443d30cb7863b7990bf6989122418eb2387bd2e3d3c92877efe48
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ reclamation.id) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "reclamation/_delete_form.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\reclamation\\_delete_form.html.twig");
+", "reclamation/_delete_form.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\reclamation\\_delete_form.html.twig");
     }
 }

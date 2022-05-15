@@ -115,6 +115,6 @@ class __TwigTemplate_a23f1557b2b352c1cb4e0a094e45c12ae0ec48cec83f0fdc70e11c11734
 
     <a href=\"{{ path('app_bad_words_index') }}\">back to list</a>
 {% endblock %}
-", "Back-office/bad_words/new.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\bad_words\\new.html.twig");
+", "Back-office/bad_words/new.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\bad_words\\new.html.twig");
     }
 }

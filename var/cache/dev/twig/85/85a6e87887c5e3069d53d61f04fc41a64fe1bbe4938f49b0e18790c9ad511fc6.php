@@ -318,6 +318,6 @@ class __TwigTemplate_ed58e847de0b5b22d65d3602769abf5cec798b41ba213cd07add8e3bcdb
     {% endif %}
     </ul>
 {% endif %}
-", "@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\twitter_bootstrap_v3_pagination.html.twig");
+", "@KnpPaginator/Pagination/twitter_bootstrap_v3_pagination.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\twitter_bootstrap_v3_pagination.html.twig");
     }
 }

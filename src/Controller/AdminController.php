@@ -15,6 +15,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Doctrine\ORM\EntityManagerInterface;
 use  Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\Serializer\Serializer;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
+use Symfony\Component\Serializer\Mapping\Factory\ClassMetadataFactory;
+
 
 class AdminController extends AbstractController
 {
@@ -28,7 +34,7 @@ class AdminController extends AbstractController
         ]);
     }
 
-   /**
+    /**
      * @Route("/admin/Users", name="admin/Users", methods={"GET"})
      */
     public function list_users(): Response
@@ -122,13 +128,105 @@ class AdminController extends AbstractController
             "Attachment" => true
         ]);
     }
-    /**
-     * @Route("/admin/UsersPDF", name="UsersPDF")
-     */
-    // public function PDF()
-    // {
-    //     $users = $this->getDoctrine()->getRepository(User::class)->findAll();
-    //     return $this->render('Back-office/UserPDF.html.twig', array("users" => $users));
-    // }
 
+    /**
+     * @Route("/user/AllUsers", name="AllUsers")
+     */
+    public function All_users(): Response
+    {
+        $users = $this->getDoctrine()->getRepository(User::class)->findAll();
+        if ($users) {
+
+            $serializer = new Serializer([new ObjectNormalizer()]);
+            $formatted = $serializer->normalize($users);
+            return new JsonResponse($formatted);
+        } else {
+            return new Response("no users");
+        }
+    }
+
+
+     /**
+     * @Route("/lesusers/", name="userss")
+     */
+    public function afficherpostsjson(Request $request,NormalizerInterface $Normalizer)
+    {
+        $repository = $this->getDoctrine()->getRepository(User::class);
+        $comment = $repository->findAll();
+        
+        
+
+        $output = array();
+
+        foreach($comment as $event)
+        {
+          
+            $output[] = array('id'=>$event->getId(),'username'=>$event->getUsername(),'email'=>$event->getEmail());
+          
+
+        }
+        return new JsonResponse($output);
+    }
+
+    /**
+     * @Route("/user/delUser/{id}", name="delUser")
+     */
+    public function delUser(NormalizerInterface $Normalizer, $id)
+    {
+
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository(User::class)->find($id);
+        $em->remove($user);
+        $em->flush();
+        $jsonContent = $Normalizer->normalize($user, 'json');
+        return new Response(json_encode($jsonContent));
+    }
+
+    /**
+     * @Route("/user/ajTeam", name="delUser")
+     */
+    public function adTeam(Request $request)
+    {
+        $name = $request->query->get("teamname");
+        $description = $request->query->get("description");
+        $team = new Team();
+        $team->setTeamName($name);
+        $team->setDescription($description);
+        try {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($team);
+            $em->flush();
+            return new JsonResponse("Team created", 200);
+        } catch (\Exception $ex) {
+            return new Response("exception" . $ex->getMessage());
+        }
+    }
+
+    /**
+     * @Route("/user/allTeam", name="allTeam")
+     */
+    public function All_teams(): Response
+    {
+        $teams = $this->getDoctrine()->getRepository(Team::class)->findAll();
+        if ($teams) {
+            $serializer = new Serializer([new ObjectNormalizer()]);
+            $formatted = $serializer->normalize($teams);
+            return new JsonResponse($formatted);
+        } else {
+            return new Response("no teams");
+        }
+    }
+
+    /**
+     * @Route("/user/delTeam/{id}", name="delTeamm")
+     */
+    public function delTeam(NormalizerInterface $Normalizer, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $team = $em->getRepository(Team::class)->find($id);
+        $em->remove($team);
+        $em->flush();
+        $jsonContent = $Normalizer->normalize($team, 'json');
+        return new Response(json_encode($jsonContent));
+    }
 }

@@ -229,6 +229,6 @@ class __TwigTemplate_3e33d3bfd0ed1096a50c883aeea825a788f344bf135afbb011cd98d03e4
 
     {{ include('back-office/comments/_supprimer_form.html.twig') }}
 {% endblock %}
-", "Back-office/comments/voir.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\comments\\voir.html.twig");
+", "Back-office/comments/voir.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\comments\\voir.html.twig");
     }
 }

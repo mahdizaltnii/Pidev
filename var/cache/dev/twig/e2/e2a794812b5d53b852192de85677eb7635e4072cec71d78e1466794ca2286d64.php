@@ -79,6 +79,6 @@ class __TwigTemplate_7ea1b0c58bb143b0ea6fe0ef764cc0f41a7be9eda61ed7c18d8b08065ea
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ bad_word.id) }}\">
     <button class=\"btn\">Delete</button>
 </form>
-", "Back-office/bad_words/_delete_form.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\bad_words\\_delete_form.html.twig");
+", "Back-office/bad_words/_delete_form.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-office\\bad_words\\_delete_form.html.twig");
     }
 }

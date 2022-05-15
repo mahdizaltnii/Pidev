@@ -258,6 +258,6 @@ class __TwigTemplate_661dae2a8e7bc7fd33825a914a8f326ff201789746b23e608a129e723c3
     </body>
 </html>
 {% block after_html %}{% endblock %}
-", "@Twig/layout.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\twig-bundle\\Resources\\views\\layout.html.twig");
+", "@Twig/layout.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\twig-bundle\\Resources\\views\\layout.html.twig");
     }
 }

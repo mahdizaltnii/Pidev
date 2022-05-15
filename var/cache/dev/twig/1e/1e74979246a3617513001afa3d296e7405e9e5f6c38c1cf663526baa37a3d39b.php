@@ -130,6 +130,6 @@ class __TwigTemplate_97234d4fa3e469be9562cb1e946362ecdd5fb06e72e7fcfa0d1f02d40cd
     </section>
 
     
-{% endblock %}", "blog/ajoutC.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\blog\\ajoutC.html.twig");
+{% endblock %}", "blog/ajoutC.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\blog\\ajoutC.html.twig");
     }
 }

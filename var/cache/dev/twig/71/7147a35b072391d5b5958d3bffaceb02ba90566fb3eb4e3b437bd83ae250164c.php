@@ -61,6 +61,6 @@ class __TwigTemplate_4d812f0fc60c4fc46f67ee13dd02b5fa4a1b7dc962bd64863e304cc2d12
 
     public function getSourceContext()
     {
-        return new Source("<h1>Merci d'avoir ajouter votre annonce dans notre plateform.</h1>", "Mail/mail.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Mail\\mail.html.twig");
+        return new Source("<h1>Merci d'avoir ajouter votre annonce dans notre plateform.</h1>", "Mail/mail.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Mail\\mail.html.twig");
     }
 }

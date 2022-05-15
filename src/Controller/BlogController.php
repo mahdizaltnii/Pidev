@@ -16,8 +16,12 @@ use App\Repository\UserRepository;
 use App\Repository\PostLikeRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Entity\User;
+use Symfony\Component\Serializer\Encoder\JsonEncoder;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+
 use Doctrine\ORM\Tools\Pagination\Paginator;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Serializer\Serializer;
 
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
@@ -25,6 +29,8 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Gedmo\Sluggable\Util\Urlizer;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class BlogController extends AbstractController
 {
@@ -43,7 +49,7 @@ class BlogController extends AbstractController
         $post=$paginator->paginate(
             $donnees,
             $request->query->getInt('page', 1),
-            1
+            10
         );
 
         return $this->render('blog/index.html.twig', [
@@ -257,16 +263,7 @@ class BlogController extends AbstractController
 
 
 
-    /**
-     * @Route("/Allposts", name="afficher_toutposts" )
-     */
-    public function afficherposts(NormalizerInterface $normalizer)
-    {
-        $repository = $this->getDoctrine()->getRepository(Posts::class);
-        $posts = $repository->findAll();
-        $jsonContent = $normalizer->normalize($posts, 'json', ['groups' => 'post:read']);
-        return new Response(json_encode($jsonContent));
-    }
+  
 
     /**
      * @Route("/comment/CommentbyidsJSON/", name="commentby")
@@ -387,4 +384,271 @@ class BlogController extends AbstractController
             $em->flush($rating);
             return $this->redirectToRoute('posts_index');
    }
+    /**
+     * @Route("/Allposts", name="afficher_toutposts" )
+     */
+    public function afficherposts(NormalizerInterface $normalizer)
+    {
+        $repository = $this->getDoctrine()->getRepository(Posts::class);
+        $posts = $repository->findAll();
+        $jsonContent = $normalizer->normalize($posts, 'json', ['groups' => 'post:read']);
+        return new Response(json_encode($jsonContent));
+    }
+
+    
+
+      /**
+     * @Route("/CommentbyidsJSON/", name="commentbyid")
+     */
+    public function commentsbyID(Request $request, NormalizerInterface $Normalizer)
+    {
+        $repository = $this->getDoctrine()->getRepository(Comments::class);
+        $comment = $repository->findAll();
+        $output = array();
+
+        foreach($comment as $event)
+        {
+           // $output['id']=$event->getId();
+           // $output['content']=$event->getContent();
+           // $output['created_at']=$event->getCreatedAt()->format("d-m-y");
+            $output[] = array($event->getId(), $event->getContent(),$event->getCreatedAt()->format("d-m-y"));
+
+        }
+        
+        
+        return new JsonResponse($output);
+       // return new Response(json_encode($output));
+        
+       // $jsonContent = $Normalizer->normalize($comment, 'json', ['groups' => 'post:read']);
+       // return new Response(json_encode($jsonContent));
+    }
+
+
+    
+      /**
+     * @Route("/postjson/", name="postjson")
+     */
+    public function afficherpostsjson(Request $request,NormalizerInterface $Normalizer)
+    {
+        $repository = $this->getDoctrine()->getRepository(Posts::class);
+        $comment = $repository->findAll();
+        
+        
+
+        $output = array();
+
+        foreach($comment as $event)
+        {
+          
+            $output[] = array('id'=>$event->getId(),'content'=> $event->getContent(),'title'=>$event->getTitle(),'Objet'=>$event->getObjet(),'created_at'=>$event->getCreatedAt()->format("d-m-y"),'picture'=>$event->getPicture(),'nbre de like'=>$event->getLikes()->count(),'les commentaires'=>$event->getComments()->count());
+          
+
+        }
+        return new JsonResponse($output);
+    }
+     /**
+     * @Route("/postbyidsJSON/{id}", name="postbyid")
+     */
+    public function postssbyID(Request $request,$id, NormalizerInterface $Normalizer)
+    {
+        $repository = $this->getDoctrine()->getRepository(Posts::class);
+        $post = $repository->find($id);
+        //$comment = new Comments();
+       // $comment=$post->getComments();
+        $jsonContent = $Normalizer->normalize($post, 'json', ['groups' => 'post:read']);
+        return new Response(json_encode($jsonContent));
+    }
+    
+
+
+    /**
+     * @Route("/commentsbyidpost/{id}", name="commentbypost")
+     */
+    public function commentsbyidpost(Request $request,$id, NormalizerInterface $Normalizer)
+    {
+        
+        $repository = $this->getDoctrine()->getRepository(Posts::class);
+        $post = $repository->find($id);
+        $comment = new Comments();
+        $comment=$post->getComments();
+        $jsonContent = $Normalizer->normalize($comment, 'json', ['groups' => 'post:read']);
+        return new Response(json_encode($jsonContent));
+    }
+
+
+    /**
+     * @Route("/detailpostjs", name="detail_articlejs")
+     * @Method("GET")
+     */
+    public function detailpostAction(Request $request)
+    {
+        $id = $request->get("id");
+        $article = $this->getDoctrine()->getManager()->getRepository(Posts::class)->find($id);
+        $encoder = new JsonEncoder();
+        $normalizer = new ObjectNormalizer();
+       $normalizer->setCircularReferenceHandler(function ($object) {
+           // return $object->getId();
+                   
+                          
+        });
+        $serializer = new Serializer([$normalizer], [$encoder]);
+        $formatted = $serializer->normalize($article);
+        return new JsonResponse($formatted);
+    }
+
+
+
+      /**
+     * @Route("/detailcommentjs", name="detail_commentjs")
+     * @Method("GET")
+     */
+    public function detailcommentAction(Request $request)
+    {
+        $id = $request->get("id");
+        $article = $this->getDoctrine()->getManager()->getRepository(Comments::class)->find($id);
+        $encoder = new JsonEncoder();
+        $normalizer = new ObjectNormalizer();
+       $normalizer->setCircularReferenceHandler(function ($object) {
+            return $object->getId();
+                   
+                          
+        });
+        $serializer = new Serializer([$normalizer], [$encoder]);
+        $formatted = $serializer->normalize($article);
+        return new JsonResponse($formatted);
+    }
+    
+
+   /**
+    * @Route("/ajoutCJson/new/" , name="ajoutJsonComment")
+    */
+    public function AjoutJComments(Request $request, NormalizerInterface $Normalizer)
+
+    {
+
+        //$post = $this->getDoctrine()->getManager()->getRepository(Posts::class)->find($id);
+        $em=$this->getDoctrine()->getManager();
+        $comment=new Comments();
+       // $dateImmutable = \DateTimeImmutable::createFromFormat('Y-m-d H:i:s', strtotime('now')); # also tried using \DateTimeImmutable
+      // $date = DateTimeImmutable::createFromFormat('j-M-Y', 'now');
+      // $date = \DateTimeImmutable('Y-m-d H:i:s', strtotime('Wed, 21 Jul 2010 00:28:50 GMT'));
+      $date=new \DateTimeImmutable();
+
+
+        //$date= DateTime::createFromFormat('Y-m-d H:i:s', strtotime('now'));
+        $comment->setContent($request->get('content'));
+        $user=$this->getUser();
+        $comment->setUser($user);
+       // $comment->setPoste($post);
+        $comment->setCreatedAt($date);
+
+        $em->persist($comment);
+        $em->flush();
+        $jsonContent = $Normalizer->normalize($comment, 'json', ['groups' => 'post:read']);
+        return new Response(json_encode($jsonContent));
+
+    }
+
+   /**
+    * @Route("/updateCJson/{id}" , name="updateJsonComment")
+    */
+    public function updateJComments(Request $request, NormalizerInterface $Normalizer, $id)
+
+    {   $em=$this->getDoctrine()->getManager();
+        $comment = $em->getRepository(Comments::class)->find($id);
+
+        
+         $comment->setContent($request->get('content'));
+
+ 
+        $em->flush();
+        $jsonContent = $Normalizer->normalize($comment, 'json', ['groups' => 'post:read']);
+        return new Response(json_encode($jsonContent));
+
+    }
+
+   /**
+    * @Route("/deleteCJson/{id}" , name="deleteComment")
+    */
+    public function deleteJComments(Request $request, NormalizerInterface $Normalizer, $id)
+
+    {
+        $em=$this->getDoctrine()->getManager();
+        $comment = $em->getRepository(Comments::class)->find($id);
+
+        
+       
+        $em->remove($comment);
+        $em->flush();
+        $jsonContent = $Normalizer->normalize($comment, 'json', ['groups' => 'post:read']);
+        return new Response(json_encode($jsonContent));
+
+    }
+
+    /**
+    * @Route("/ajoutJson/new" , name="ajoutJsonPost")
+    */
+    public function AjoutJPosts(Request $request, NormalizerInterface $Normalizer)
+
+    {
+        $user=$this->getUser();
+
+        $em=$this->getDoctrine()->getManager();
+        $post=new Posts();
+        $date=new \DateTimeImmutable();
+        $post->setContent($request->get('content'));
+        $post->setTitle($request->get('title'));
+        $post->setObjet($request->get('objet'));
+        $post->setPicture($request->get('picture'));
+
+        $post->setUser($user);
+
+        $post->setCreatedAt($date);
+
+        $em->persist($post);
+        $em->flush();
+        $jsonContent = $Normalizer->normalize($post, 'json', ['groups' => 'post:read']);
+        return new Response(json_encode($jsonContent));
+
+    }
+
+
+    /**
+    * @Route("/updatepostJson/{id}" , name="updateJsonPost")
+    */
+    public function updateJPosts(Request $request, NormalizerInterface $Normalizer, $id)
+
+    {
+
+        $em=$this->getDoctrine()->getManager();
+        $post=$em->getRepository(Posts::class)->find($id);
+        $date=new \DateTimeImmutable();
+        $post->setContent($request->get('content'));
+        $post->setTitle($request->get('title'));
+        $post->setObjet($request->get('objet'));
+        $post->setPicture($request->get('picture'));
+        $post->setCreatedAt($date);
+        $em->flush();
+        $jsonContent = $Normalizer->normalize($post, 'json', ['groups' => 'post:read']);
+        return new Response(json_encode($jsonContent));
+
+
+    }
+   /**
+    * @Route("/deletepostJson/{id}" , name="deleteJsonComment")
+    */
+    public function deleteJpost( NormalizerInterface $Normalizer, $id)
+
+    {
+        $em=$this->getDoctrine()->getManager();
+        $post = $em->getRepository(Posts::class)->find($id);
+
+        
+       
+        $em->remove($post);
+        $em->flush();
+        $jsonContent = $Normalizer->normalize($post, 'json', ['groups' => 'post:read']);
+        return new Response(json_encode($jsonContent));
+
+    }
 }

@@ -142,6 +142,6 @@ class __TwigTemplate_419911f9e2d8279eb5b327cc213cf23321b838ae8d81c74eef5a69bb3b1
 {% endblock %}
 
 
-", "categorie/edit.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\categorie\\edit.html.twig");
+", "categorie/edit.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\categorie\\edit.html.twig");
     }
 }

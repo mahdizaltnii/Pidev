@@ -182,6 +182,6 @@ class __TwigTemplate_e1522a840c328946d9f672d926a21de365ba5fbdcb340d348c963c67e22
 
     {{ include('categorie/_delete_form.html.twig') }}
 {% endblock %}
-", "categorie/show.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\categorie\\show.html.twig");
+", "categorie/show.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\categorie\\show.html.twig");
     }
 }

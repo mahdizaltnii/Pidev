@@ -63,6 +63,6 @@ class __TwigTemplate_c317da33721a7a85c9e5f479a587bfcc329bf587e657bea260284951038
     public function getSourceContext()
     {
         return new Source("<?php echo \$view['form']->block(\$form, 'form_widget_simple', ['type' => \$type ?? 'range']);
-", "@Framework/Form/range_widget.html.php", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\range_widget.html.php");
+", "@Framework/Form/range_widget.html.php", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\symfony\\framework-bundle\\Resources\\views\\Form\\range_widget.html.php");
     }
 }

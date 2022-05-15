@@ -66,6 +66,8 @@ class __TwigTemplate_51c7a1b1dfd043eb3d0699161ef1890878160cab8297e004142a939fc5e
 
         // line 3
         echo "<div id=\"fb-root\"></div>
+
+
 <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
@@ -74,15 +76,15 @@ class __TwigTemplate_51c7a1b1dfd043eb3d0699161ef1890878160cab8297e004142a939fc5e
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
 
-<script async defer crossorigin=\"anonymous\" src=\"https://connect.facebook.net/fr_FR/sdk/debug.js\" nonce=\"J1tpdd1I\"></script>
+       <script async defer crossorigin=\"anonymous\" src=\"https://connect.facebook.net/fr_FR/sdk/debug.js\" nonce=\"J1tpdd1I\"></script>
         <script>
             document.getElementById('shareBtn').onclick = function() {
                 FB.ui({
                     display: 'popup',
                     method: 'share',
                     href: 'http://localhost:8000/detail/";
-        // line 18
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 18, $this->source); })()), "id", [], "any", false, false, false, 18), "html", null, true);
+        // line 20
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 20, $this->source); })()), "id", [], "any", false, false, false, 20), "html", null, true);
         echo "',
                 }, function(response){});
             }
@@ -104,28 +106,28 @@ class __TwigTemplate_51c7a1b1dfd043eb3d0699161ef1890878160cab8297e004142a939fc5e
  <section class=\"vs-blog-wrapper blog-single-layout1 space-top newsletter-pb\">
    <div class=\"container\">
   ";
-        // line 38
-        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 38, $this->source); })()), "user", [], "any", false, false, false, 38)) {
-            // line 39
+        // line 40
+        if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 40, $this->source); })()), "user", [], "any", false, false, false, 40)) {
+            // line 41
             echo "  ";
-            if ((isset($context["result"]) || array_key_exists("result", $context) ? $context["result"] : (function () { throw new RuntimeError('Variable "result" does not exist.', 39, $this->source); })())) {
-                // line 40
+            if ((isset($context["result"]) || array_key_exists("result", $context) ? $context["result"] : (function () { throw new RuntimeError('Variable "result" does not exist.', 41, $this->source); })())) {
+                // line 42
                 echo "     <a href=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("posts_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 40, $this->source); })()), "id", [], "any", false, false, false, 40)]), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("posts_edit", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 42, $this->source); })()), "id", [], "any", false, false, false, 42)]), "html", null, true);
                 echo "\" class=\"vs-btn outline1 d-none d-xl-inline-block\"
        style=\"color:black;\">Modifier la post!</a>
         
        <a href=\"";
-                // line 43
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("posts_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 43, $this->source); })()), "id", [], "any", false, false, false, 43)]), "html", null, true);
+                // line 45
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("posts_delete", ["id" => twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 45, $this->source); })()), "id", [], "any", false, false, false, 45)]), "html", null, true);
                 echo "\" class=\"vs-btn outline1 d-none d-xl-inline-block\"
        style=\"color:black;\">supprimer la post!</a>
         ";
             }
-            // line 46
+            // line 48
             echo "        ";
         }
-        // line 47
+        // line 49
         echo "     <br>
      <br>
      <div class=\"row\">
@@ -133,56 +135,56 @@ class __TwigTemplate_51c7a1b1dfd043eb3d0699161ef1890878160cab8297e004142a939fc5e
          <div class=\"vs-blog\">
            <div class=\"blog-image image-scale-hover\">
              <a href=\"blog-details.html\"><img src=\"/uploads/";
-        // line 53
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 53, $this->source); })()), "picture", [], "any", false, false, false, 53), "html", null, true);
+        // line 55
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 55, $this->source); })()), "picture", [], "any", false, false, false, 55), "html", null, true);
         echo "\" style=\"width: 99%;\" alt=\"";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 53, $this->source); })()), "id", [], "any", false, false, false, 53), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 55, $this->source); })()), "id", [], "any", false, false, false, 55), "html", null, true);
         echo "\"
                  class=\"w-100\" alt=\"Blog Image\" /></a>
            </div>
            <div class=\"blog-meta bg-smoke has-border\">
              <a href=\"#\"><i class=\"fal fa-calendar-alt\"></i>created at ";
-        // line 57
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 57, $this->source); })()), "createdAt", [], "any", false, false, false, 57), "d/m/Y H:i"), "html", null, true);
+        // line 59
+        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 59, $this->source); })()), "createdAt", [], "any", false, false, false, 59), "d/m/Y H:i"), "html", null, true);
         echo "</a>
              <a href=\"#\"><i class=\"far fa-comments\"></i>";
-        // line 58
-        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 58, $this->source); })())), "html", null, true);
+        // line 60
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 60, $this->source); })())), "html", null, true);
         echo "</a>
               <h4 class=\"name\" style=\"color:black\">posted by ";
-        // line 59
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 59, $this->source); })()), "user", [], "any", false, false, false, 59), "username", [], "any", false, false, false, 59), "html", null, true);
+        // line 61
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 61, $this->source); })()), "user", [], "any", false, false, false, 61), "username", [], "any", false, false, false, 61), "html", null, true);
         echo "</h4>
               ";
-        // line 61
+        // line 63
         echo "              ";
-        // line 62
+        // line 64
         echo "             ";
-        // line 66
+        // line 68
         echo "                <iframe src=\"https://www.facebook.com/plugins/share_button.php?href=http%3A%2F%2F127.0.0.1%3A8000%2Fdetail%2F";
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 66, $this->source); })()), "id", [], "any", false, false, false, 66), "html", null, true);
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 68, $this->source); })()), "id", [], "any", false, false, false, 68), "html", null, true);
         echo "&layout=button_count&size=small&width=91&height=20&appId\" width=\"91\" height=\"20\" style=\"border:none;overflow:hidden\" scrolling=\"no\" frameborder=\"0\" allowfullscreen=\"true\" allow=\"autoplay; 
 clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>
            </div>
            <div class=\"blog-content bg-smoke\">
              <h2 class=\"blog-title h4 font-theme\">
                <a href=\"blog-details.html\">";
-        // line 71
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 71, $this->source); })()), "Objet", [], "any", false, false, false, 71), "html", null, true);
+        // line 73
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 73, $this->source); })()), "Objet", [], "any", false, false, false, 73), "html", null, true);
         echo "</a>
              </h2>
              <p>
                ";
-        // line 74
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 74, $this->source); })()), "content", [], "any", false, false, false, 74), "html", null, true);
+        // line 76
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 76, $this->source); })()), "content", [], "any", false, false, false, 76), "html", null, true);
         echo "
              </p>
              
 
              ";
-        // line 94
+        // line 96
         echo "             ";
-        // line 151
+        // line 153
         echo "          
            </div>
          </div>
@@ -190,36 +192,36 @@ clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>
          <div class=\"vs-comment-area list-style-none vs-comments-layout1\">
            
            <h3 style=\"color:black\">";
-        // line 157
-        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 157, $this->source); })())), "html", null, true);
+        // line 159
+        echo twig_escape_filter($this->env, twig_length_filter($this->env, (isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 159, $this->source); })())), "html", null, true);
         echo " Commentaires</h3>
            <ul class=\"comment-list\">
              <li class=\"vs-comment\">
              
                ";
-        // line 161
+        // line 163
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 161, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["comment"]) || array_key_exists("comment", $context) ? $context["comment"] : (function () { throw new RuntimeError('Variable "comment" does not exist.', 163, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["comments"]) {
-            // line 162
+            // line 164
             echo "               <div class=\"vs-post-comment\">
                  <div class=\"author-img\">
                    <img src=\"/uploads/";
-            // line 164
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 164, $this->source); })()), "picture", [], "any", false, false, false, 164), "html", null, true);
+            // line 166
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 166, $this->source); })()), "picture", [], "any", false, false, false, 166), "html", null, true);
             echo "\" alt=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 164, $this->source); })()), "id", [], "any", false, false, false, 164), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["post"]) || array_key_exists("post", $context) ? $context["post"] : (function () { throw new RuntimeError('Variable "post" does not exist.', 166, $this->source); })()), "id", [], "any", false, false, false, 166), "html", null, true);
             echo "\" />
                  </div>
                  <div class=\"comment-content\">
                    <div class=\"comment-top\">
                      <div class=\"comment-author\">
                        ";
-            // line 170
+            // line 172
             echo "                       <div class=\"mb-10\">
                          <span class=\"commented-on\">created at ";
-            // line 171
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comments"], "createdAt", [], "any", false, false, false, 171), "d/m/Y H:i"), "html", null, true);
+            // line 173
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["comments"], "createdAt", [], "any", false, false, false, 173), "d/m/Y H:i"), "html", null, true);
             echo "</span>
                        </div>
                      </div>
@@ -227,16 +229,16 @@ clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>
 
                      <div class=\"reply_and_edit\">
                      ";
-            // line 177
-            if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 177, $this->source); })()), "user", [], "any", false, false, false, 177)) {
-                // line 178
+            // line 179
+            if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 179, $this->source); })()), "user", [], "any", false, false, false, 179)) {
+                // line 180
                 echo "                       <a href=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comments_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["comments"], "id", [], "any", false, false, false, 178)]), "html", null, true);
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("comments_edit", ["id" => twig_get_attribute($this->env, $this->source, $context["comments"], "id", [], "any", false, false, false, 180)]), "html", null, true);
                 echo "\" class=\"vs-btn\">Modifier</a>
                       
                                                      ";
             }
-            // line 181
+            // line 183
             echo "
                        <a href=\"#ajouter-commentaire\"   class=\"vs-btn\"><i class=\"fal fa-reply-all mr-10\"></i>Reply</a>
                      </div>
@@ -244,8 +246,8 @@ clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>
                    <p class=\"text\">
                    
                      ";
-            // line 187
-            echo twig_get_attribute($this->env, $this->source, $context["comments"], "content", [], "any", false, false, false, 187);
+            // line 189
+            echo twig_get_attribute($this->env, $this->source, $context["comments"], "content", [], "any", false, false, false, 189);
             echo "
                    </p>
                  </div>
@@ -255,21 +257,21 @@ clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['comments'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 192
+        // line 194
         echo "               <div class=\"clo-xs2 col-sm3\" id=\"ajouter-commentaire\">
                <h3 class=\"mt-n2 font-theme text-normal\" style=\"color:black\">Leave a Comment</h3>
                ";
-        // line 194
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Commentform"]) || array_key_exists("Commentform", $context) ? $context["Commentform"] : (function () { throw new RuntimeError('Variable "Commentform" does not exist.', 194, $this->source); })()), 'form_start');
+        // line 196
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Commentform"]) || array_key_exists("Commentform", $context) ? $context["Commentform"] : (function () { throw new RuntimeError('Variable "Commentform" does not exist.', 196, $this->source); })()), 'form_start');
         echo "
                ";
-        // line 195
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Commentform"]) || array_key_exists("Commentform", $context) ? $context["Commentform"] : (function () { throw new RuntimeError('Variable "Commentform" does not exist.', 195, $this->source); })()), "content", [], "any", false, false, false, 195), 'row', ["attr" => ["placeholder" => "Votre Commentaire"]]);
+        // line 197
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Commentform"]) || array_key_exists("Commentform", $context) ? $context["Commentform"] : (function () { throw new RuntimeError('Variable "Commentform" does not exist.', 197, $this->source); })()), "content", [], "any", false, false, false, 197), 'row', ["attr" => ["placeholder" => "Votre Commentaire"]]);
         echo "
                <button type=\"submit\" class=\"btn btn-success\">Commenter</button>
                ";
-        // line 197
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Commentform"]) || array_key_exists("Commentform", $context) ? $context["Commentform"] : (function () { throw new RuntimeError('Variable "Commentform" does not exist.', 197, $this->source); })()), 'form_end');
+        // line 199
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Commentform"]) || array_key_exists("Commentform", $context) ? $context["Commentform"] : (function () { throw new RuntimeError('Variable "Commentform" does not exist.', 199, $this->source); })()), 'form_end');
         echo "
                </div>
                
@@ -563,7 +565,7 @@ clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>
 
     public function getDebugInfo()
     {
-        return array (  272 => 197,  267 => 195,  263 => 194,  259 => 192,  248 => 187,  240 => 181,  233 => 178,  231 => 177,  222 => 171,  219 => 170,  209 => 164,  205 => 162,  201 => 161,  194 => 157,  186 => 151,  184 => 94,  177 => 74,  171 => 71,  162 => 66,  160 => 62,  158 => 61,  154 => 59,  150 => 58,  146 => 57,  137 => 53,  129 => 47,  126 => 46,  120 => 43,  113 => 40,  110 => 39,  108 => 38,  85 => 18,  68 => 3,  58 => 2,  35 => 1,);
+        return array (  274 => 199,  269 => 197,  265 => 196,  261 => 194,  250 => 189,  242 => 183,  235 => 180,  233 => 179,  224 => 173,  221 => 172,  211 => 166,  207 => 164,  203 => 163,  196 => 159,  188 => 153,  186 => 96,  179 => 76,  173 => 73,  164 => 68,  162 => 64,  160 => 63,  156 => 61,  152 => 60,  148 => 59,  139 => 55,  131 => 49,  128 => 48,  122 => 45,  115 => 42,  112 => 41,  110 => 40,  87 => 20,  68 => 3,  58 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -571,6 +573,8 @@ clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>
         return new Source(" {% extends \"base-front.html.twig\" %}
  {% block body %}
 <div id=\"fb-root\"></div>
+
+
 <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
@@ -579,7 +583,7 @@ clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>
             fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
 
-<script async defer crossorigin=\"anonymous\" src=\"https://connect.facebook.net/fr_FR/sdk/debug.js\" nonce=\"J1tpdd1I\"></script>
+       <script async defer crossorigin=\"anonymous\" src=\"https://connect.facebook.net/fr_FR/sdk/debug.js\" nonce=\"J1tpdd1I\"></script>
         <script>
             document.getElementById('shareBtn').onclick = function() {
                 FB.ui({
@@ -1038,6 +1042,6 @@ clipboard-write; encrypted-media; picture-in-picture; web-share\"></iframe>
 
  {% endblock %}
 
- ", "blog/details.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\blog\\details.html.twig");
+ ", "blog/details.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\blog\\details.html.twig");
     }
 }

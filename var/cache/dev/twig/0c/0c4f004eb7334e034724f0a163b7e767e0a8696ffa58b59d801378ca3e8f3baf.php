@@ -321,6 +321,6 @@ class __TwigTemplate_2fcef637c350a70bbd4d95356574308825d68fea6de27b6cb2ef1fff039
         </ul>
     </nav>
 {% endif %}
-", "@KnpPaginator/Pagination/foundation_v6_pagination.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\foundation_v6_pagination.html.twig");
+", "@KnpPaginator/Pagination/foundation_v6_pagination.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\vendor\\knplabs\\knp-paginator-bundle\\templates\\Pagination\\foundation_v6_pagination.html.twig");
     }
 }

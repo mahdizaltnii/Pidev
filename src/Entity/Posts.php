@@ -25,16 +25,16 @@ class Posts
     private $id;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
      * @Groups("post:read")
-     * @Assert\NotBlank
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\NotBlank(message="contenu canoot be null")
      * @Assert\Length(min=5 , minMessage = " votre title doit contenir au minimum 5 caratères")
      */
     private $title;
 
     /**
-     * @ORM\Column(type="text")
      * @Groups("post:read")
+     * @ORM\Column(type="text")
      * @Assert\NotBlank(message="contenu canoot be null")
      * @Assert\Length(min=5 , minMessage = " votre title doit contenir au minimum 5 caratères")
      */
@@ -43,26 +43,26 @@ class Posts
     private $content;
 
     /**
-     * @ORM\Column(type="datetime_immutable")
      * @Groups("post:read")
+     * @ORM\Column(type="datetime_immutable")
      */
     private $created_at;
 
     /**
-     * @ORM\Column(type="string", length=255)
      * @Groups("post:read")
+     * @ORM\Column(type="string", length=255)
      */
     private $picture;
 
     /**
-     * @ORM\OneToMany(targetEntity=Comments::class, mappedBy="poste", orphanRemoval=true)
      * @Groups("post:read")
+     * @ORM\OneToMany(targetEntity=Comments::class, mappedBy="poste", orphanRemoval=true)
      */
     private $comments;
 
     /**
-     * @ORM\Column(type="string", length=255)
      * @Groups("post:read")
+     * @ORM\Column(type="string", length=255)
      * @Assert\NotBlank(message="object canoot be null")
      * @Assert\Length(min=5 , minMessage = " votre title doit contenir au minimum 5 caratères")
      */
@@ -70,11 +70,12 @@ class Posts
 
     /**
      * @ORM\ManyToOne(targetEntity=User::class, inversedBy="posts")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\JoinColumn(nullable=true)
      */
     private $user;
 
     /**
+     * @Groups("post:read")
      * @ORM\OneToMany(targetEntity=PostLike::class, mappedBy="post",orphanRemoval=true)
      */
     private $likes;

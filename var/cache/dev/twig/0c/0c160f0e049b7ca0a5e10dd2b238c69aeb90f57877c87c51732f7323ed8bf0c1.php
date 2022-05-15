@@ -105,6 +105,6 @@ class __TwigTemplate_1cf5ba2cf520a5a77f20a3719a4b90b6208bade9c9682dcbf0b15d45699
 
     {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
     {{ form_end(form) }}
-{% endblock %}", "Back-Categorie/ajoutAnnonceCat.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-Categorie\\ajoutAnnonceCat.html.twig");
+{% endblock %}", "Back-Categorie/ajoutAnnonceCat.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Back-Categorie\\ajoutAnnonceCat.html.twig");
     }
 }

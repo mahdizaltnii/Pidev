@@ -156,6 +156,6 @@ class __TwigTemplate_64278577c6181925bfe5ddc284baac042751a2fccd20c50c20d7be604d4
     <a href=\"{{ path('reclamation_index') }}\">back to list</a>
 
     {{ include('reclamation/_delete_form.html.twig') }}
-{% endblock %}", "reclamation/edit.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\reclamation\\edit.html.twig");
+{% endblock %}", "reclamation/edit.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\reclamation\\edit.html.twig");
     }
 }

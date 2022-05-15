@@ -280,6 +280,6 @@ class __TwigTemplate_426c37fc7bb777b7d29b2af4f403e3e06a2f319bc87af84f14c8ce3a4eb
 
     </div>
     {{ knp_pagination_render(annonce) }}
-{% endblock %}", "Front-Annonces/afficheAnnonce.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-Annonces\\afficheAnnonce.html.twig");
+{% endblock %}", "Front-Annonces/afficheAnnonce.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\Front-Annonces\\afficheAnnonce.html.twig");
     }
 }

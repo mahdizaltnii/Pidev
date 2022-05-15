@@ -214,6 +214,6 @@ class __TwigTemplate_e97288fb5407a202fb8160da037ac622f3d370e23617d8d83678b6a0285
 
     <a href=\"{{ path('categorie_new') }}\">Create new</a>
 {% endblock %}
-", "categorie/index.html.twig", "C:\\Users\\hp\\Desktop\\versionfinale\\Version 2\\PiDevGeek1\\templates\\categorie\\index.html.twig");
+", "categorie/index.html.twig", "C:\\Users\\hp\\Desktop\\projects\\versionfinale\\Version 2\\PiDevGeek1\\templates\\categorie\\index.html.twig");
     }
 }
